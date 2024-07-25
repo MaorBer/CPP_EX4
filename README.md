@@ -14,3 +14,8 @@ Welcome to the Tree Iterators GUI project for Systems Programming, Exercise 4. T
 Follow the instructions in the subsequent sections to set up the project, build the tree structures, and start interacting with the GUI.
 
 Thank you for exploring the Tree Iterators GUI project. We hope it serves as a valuable learning resource and enhances your understanding of tree data structures and algorithms.
+
+## Author
+Maor Berenstein
+maorw9@gmail.com
+212305965
