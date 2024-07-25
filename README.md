@@ -17,5 +17,7 @@ Thank you for exploring the Tree Iterators GUI project. We hope it serves as a v
 
 ## Author
 Maor Berenstein
+
 maorw9@gmail.com
+
 212305965
