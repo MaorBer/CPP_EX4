@@ -68,20 +68,20 @@ inline QString toQString<Complex>(Complex value)
 }
 
 /**
- * Screen class to display the tree in a GUI.
+ * Frontend class to display the tree in a GUI.
  * T - type of the tree node values
  * D - number of children per node (degree of the tree)
  */
 template <typename T, unsigned int D>
-class Screen
+class Frontend
 {
     QApplication *my_app;          // Qt application instance
     QMainWindow *main_window;      // Main window
     Tree<T, D> *my_tree;           // Tree to display
     QGraphicsView *my_view;        // View to display the tree graphics
     QGraphicsScene *my_scene;      // Scene to manage the tree graphics
-    int screen_width;              // Screen width
-    int screen_height;             // Screen height
+    int screen_width;              // Frontend width
+    int screen_height;             // Frontend height
 
     QPushButton *bfs_button;       // Button for BFS traversal
     QPushButton *dfs_button;       // Button for DFS traversal
@@ -93,10 +93,10 @@ class Screen
 
 public:
     /**
-     * Constructor for the Screen class.
+     * Constructor for the Frontend class.
      * Initializes the application, main window, and buttons.
      */
-    Screen(Tree<T, D> &tree)
+    Frontend(Tree<T, D> &tree)
     {
         int argc = 1;
         char letter = 'M';
@@ -229,7 +229,7 @@ private:
  * Draws a node and returns its center position.
  */
 template <typename T, unsigned int D>
-QPointF Screen<T, D>::draw_node(typename Node<T>::Node *node, int x, int y)
+QPointF Frontend<T, D>::draw_node(typename Node<T>::Node *node, int x, int y)
 {
     QGraphicsEllipseItem *ellipse = my_scene->addEllipse(x - NODE_RADIUS, y - NODE_RADIUS, 2 * NODE_RADIUS, 2 * NODE_RADIUS);
     QBrush brush(Qt::blue);
@@ -250,16 +250,16 @@ QPointF Screen<T, D>::draw_node(typename Node<T>::Node *node, int x, int y)
  * Display the tree in a GUI window.
  */
 template <typename T, unsigned int D>
-Screen<T, D> display(Tree<T, D> &input_tree)
+Frontend<T, D> display(Tree<T, D> &input_tree)
 {
-    return Screen<T, D>(input_tree);
+    return Frontend<T, D>(input_tree);
 }
 
 /**
  * Clears the scene and starts the display process from the root.
  */
 template <typename T, unsigned int D>
-void Screen<T, D>::display_tree()
+void Frontend<T, D>::display_tree()
 {
     my_scene->clear();
     if (my_tree->get_root() == nullptr)
@@ -276,7 +276,7 @@ void Screen<T, D>::display_tree()
  * Recursively displays a node and its children.
  */
 template <typename T, unsigned int D>
-void Screen<T, D>::display_node(typename Node<T>::Node *node, int x, int y, int left_border, int right_border)
+void Frontend<T, D>::display_node(typename Node<T>::Node *node, int x, int y, int left_border, int right_border)
 {
     QPointF curr_center = draw_node(node, x, y);
 

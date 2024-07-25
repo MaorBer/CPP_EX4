@@ -747,12 +747,12 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/maor/Qt/6.7.2/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../Demo.cpp ../../Node.cpp ../../Tree.cpp ../../Screen.cpp ../../Complex.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../Demo.cpp ../../Node.cpp ../../Tree.cpp ../../Frontend.cpp ../../Complex.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
 	-$(DEL_FILE) $(OBJECTS)
-	-$(DEL_FILE) main test Demo.o Node.o Tree.o Screen.o Complex.o Test.o
+	-$(DEL_FILE) main test Demo.o Node.o Tree.o Frontend.o Complex.o Test.o
 	-$(DEL_FILE) *~ core *.core
 
 
@@ -806,7 +806,7 @@ compiler_clean: compiler_moc_predefs_clean
 
 ####### Compile
 
-Demo.o: ../../Demo.cpp ../../Screen.cpp \
+Demo.o: ../../Demo.cpp ../../Frontend.cpp \
 		/home/maor/Qt/6.7.2/gcc_64/include/QtWidgets/QApplication \
 		/home/maor/Qt/6.7.2/gcc_64/include/QtWidgets/qapplication.h \
 		/home/maor/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
