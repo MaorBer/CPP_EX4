@@ -15,7 +15,8 @@ Follow the instructions in the subsequent sections to set up the project, build 
 
 Thank you for exploring the Tree Iterators GUI project. We hope it serves as a valuable learning resource and enhances your understanding of tree data structures and algorithms.
 
-To compile the project, run ``qmake Treegui.pro``
+To compile the project, run  ```sh 
+qmake Treegui.pro
 
 and then run the gui of the tree ``make tree``
 
