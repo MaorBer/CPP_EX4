@@ -1,16 +1,75 @@
-# Tree Iterators GUI - Systems Programming, Exercise 4
+# TreeGui Data Structure Project
 
-Welcome to the Tree Iterators GUI project for Systems Programming, Exercise 4. This project is designed to provide a comprehensive understanding of tree data structures, their traversal methods, and visualization through a graphical user interface (GUI). It's an educational tool aimed at helping students and developers alike to grasp the concepts of tree algorithms and their applications in a more interactive and engaging way.
+## Description
 
-## Key Features
+This project implements a generic k-ary tree in C++. The tree supports various types of iterators (Pre-Order, Post-Order, In-Order, BFS, DFS) and can be transformed into a heap. It also includes methods for adding nodes and visualizing the tree using a GUI.
 
-- **Generic Tree Container**: A flexible implementation that allows for the creation and manipulation of tree structures with a specified maximum degree and data type.
-- **Multiple Traversal Methods**: Supports a variety of traversal algorithms including BFS, DFS, Pre-Order, In-Order, Post-Order, and Heap traversals, offering a deep dive into tree exploration techniques.
-- **Interactive GUI**: A user-friendly graphical interface that enables users to visually interact with the tree, making learning and understanding tree structures more intuitive.
-- **Complex Number Support**: The project also includes a Complex number class, demonstrating the tree container's ability to handle various data types through basic arithmetic and comparison operations.
+**Course:** System Programming 2  
+**Assignment:** EX4  
+**University:** Ariel University
 
-## Getting Started
+## Features
 
-Follow the instructions in the subsequent sections to set up the project, build the tree structures, and start interacting with the GUI.
+- **Generic k-ary Tree**: Supports nodes with up to k children.
+- **Iterators**: Implements Pre-Order, Post-Order, In-Order, BFS, and DFS iterators.
+- **Heap Conversion**: Converts binary trees to min-heaps.
+- **GUI Visualization**: Visualizes the tree using a GUI library.
 
-Thank you for exploring the Tree Iterators GUI project. We hope it serves as a valuable learning resource and enhances your understanding of tree data structures and algorithms.
+## Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/MaorBer/CPP_EX4
+    cd Downloads/CPP_EX4
+    ```
+
+2. **Install dependencies:**
+
+    Ensure you have Qt installed for GUI support. Install Qt from [Qt official site](https://www.qt.io/download).
+
+## Building the Project
+
+1. **Generate Makefile:**
+
+    ```bash
+    qmake Treegui.pro
+    ```
+
+2. **Compile the project:**
+
+    ```bash
+    make
+    ```
+
+3. **Compile the tests:**
+
+    ```bash
+    make test
+    ```
+
+4. **Run the example program:**
+
+    ```bash
+    make tree
+    ```
+
+## Usage
+
+- **Testing**: Run the tests using the `make test` command.
+- **Tree Example**: Run the example program using `make tree`.
+
+## Author
+
+Maor Berenstein  
+Email: maorw9@gmail.com
+
+## Contact
+
+For any questions or feedback, feel free to reach out via email.
+
+## Notes
+
+- This project is part of the System Programming 2 course at Ariel University.
+- Make sure to follow the project's specific guidelines and instructions for proper implementation.
+
